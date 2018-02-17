@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Collector!</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+   
+    <div class="jumbotron container">
+
+        <h1 class="text-center">Crystal Collector Game!</h1>
+    
+    </div>
+
+    <div id="main-container" class="container">
+
+        <div class="row" id="scoreboard">
+
+            <div class="col-3 text-center">
+                <h5>Target Number:</h5>
+                <p class="target-box"></p>
+            </div>
+
+            <div class="col-3 text-center">
+                <h5>Round Score:</h5>
+                <p class="roundscore-box"></p>
+            </div>
+
+            <div class="col-2 text-center">
+                <h5>Completed:</h5>
+                <p class="completed-box"></p>
+            </div>
+
+            <div class="col-2 text-center">
+                <h5>Wins:</h5>
+                <p class="win-box"></p>
+            </div>
+
+            <div class="col-2 text-center">
+                <h5>Losses:</h5>
+                <p class="loss-box"></p>
+            </div>
+
+        </div>
+
+
+        <div class="row crystals-box">
+
+            <div class="col-3">
+                <div class="card text-center" style="width: 100%;">
+                    <img class="card-img-top" src="assets/images/quartz.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Quartz</h5>
+                        <p class="card-text">It's everywhere, but you could end up pounding sand.</p>
+                        <p id="idCryst1"></p>
+                        <button class="btn btn-primary crystal-button" value="quartz">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card text-center" style="width: 100%;">
+                    <img class="card-img-top" src="assets/images/sulphur.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Sulphur</h5>
+                        <p class="card-text">It positively stinks, but it may just be sublime here!</p>
+                        <p id="idCryst2"></p>
+                        <button class="btn btn-primary crystal-button" value="sulphur">Select</button>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col-3">
+                <div class="card text-center" style="width: 100%;">
+                    <img class="card-img-top" src="assets/images/diamond.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Diamond</h5>
+                        <p class="card-text">Can you stand the pressure? It most definitely can!</p>
+                        <p id="idCryst3"></p>
+                        <button class="btn btn-primary crystal-button" value="diamond">Select</button>
+                        </div>
+                </div>
+            </div>
+                
+            <div class="col-3">
+                <div class="card text-center" style="width: 100%;">
+                    <img class="card-img-top" src="assets/images/ruby.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Ruby</h5>
+                        <p class="card-text">Corundum or a conundrum? Gotta figure it out!</p>
+                        <p id="idCryst4"></p>
+                        <button class="btn btn-primary crystal-button" value="ruby">Select</button>
+                    </div>
+                </div>
+            </div>   
+
+        </div>
+
+        <div class="row crystals-box">
+                <div class="col-12 rules-box">
+                    <p><b>Objective:</b> Win a round by reaching, but not exceeding, the target number in the box above. 
+                    <p><b>How to play:</b> There four crystals to select from. Clicking on a crystal button will add a specific amount of points to your score. You can determine the value of a crystal by noticing how your round score changes. Caution! The values of the crystals will change after each round. How many can you win?!!
+                </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+   
+    <footer>
+        <div class="container" id="footer-container">
+            <h6>&copy;Copyright 2018 Patrick Kearney</h6> 
+        </div>      
+    </footer>
+
+    
+    <script src="assets/javascript/game.js"></script>
+
+
+</body>
+
+</html>

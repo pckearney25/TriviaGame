@@ -1,0 +1,15 @@
+/* Here we go. Deep breath Repo Man!. */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+  }  
+
