@@ -9,7 +9,7 @@ $(document).ready(function() {
         correctAnswer:"Saint Louis",
         image: "assets/images/Saint_Louis.jpg",
         }, {
-        question: "Name the city whose geographic site went undiscovered by Spanish explorers for over 150 years, likely due to fog. ",
+        question: "Spanish explorers sailed past the future location of this city for over 150 years,likely due to fog.",
         firstAnswer: "Monterey",
         secondAnswer: "Valparaiso", 
         thirdAnswer: "Los Angeles",
@@ -21,7 +21,7 @@ $(document).ready(function() {
         firstAnswer: "Baghdad",
         secondAnswer: "Istanbul", 
         thirdAnswer: "Tripoli",
-        fourthAnswer:"Dmascus", 
+        fourthAnswer:"Damascus", 
         correctAnswer:"Istanbul",
         image: "assets/images/Istanbul.jpg",
         }, {       
@@ -123,13 +123,14 @@ $(document).ready(function() {
         fourthAnsDiv.text(triviaArr[count].fourthAnswer);
         $("#display-box").append(fourthAnsDiv);
 
-        $("#QA-box").text(triviaArr[count].question);
+        $("#question-box").text(triviaArr[count].question);
 
         timeNumber = 10;
+
         $("#timer-box").text(timeNumber + " Seconds");
 
         $(".answer-divs").on("click", function () {
-            userGuess= $(this).attr("value"); //capturres the users answer.
+            userGuess= $(this).attr("value"); //captures the users answer.
             console.log(userGuess);
             stop();
         });
@@ -144,7 +145,7 @@ $(document).ready(function() {
     
     function decrement() {
         timeNumber--;
-        $("#timer-box").text(timeNumber + " Seconds");
+        $("#timer-box").html(timeNumber + " Seconds");
         if (timeNumber === 0) {
             stop();
         } 
@@ -162,12 +163,12 @@ $(document).ready(function() {
     function displayAnswer(){
         
         if (timeNumber === 0){
-            $("#QA-box").text("Time is up!"); 
+            $("#question-box").text("Time is up!"); 
             unAns++; 
         } else if (userGuess === triviaArr[count].correctAnswer){
-            $("#QA-box").text("Correct!"); 
+            $("#question-box").text("Correct!"); 
             rightAns++;
-        } else if( timeNumber > 0){$("#QA-box").text("Nope!"); 
+        } else if( timeNumber > 0){$("#question-box").text("Nope!"); 
             wrongAns++;
         };
 
@@ -200,7 +201,7 @@ $(document).ready(function() {
     //Sets up the game to be replayed if the user desires. 
     function gameSummary() {
         $ ("#timer-box").text("Want to try again? Click below to retake the trivia quiz!"); 
-        $ ("#QA-box").text("Here is how you did!"); 
+        $ ("#question-box").text("Here is how you did!"); 
         $("#display-box").empty(); //removes the last set of answers from the screen. 
 
         var rightAnsDiv = $("<div>");
