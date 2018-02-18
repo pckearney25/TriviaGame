@@ -125,7 +125,7 @@ $(document).ready(function() {
 
         $("#question-box").text(triviaArr[count].question);
 
-        timeNumber = 10;
+        timeNumber = 20;
 
         $("#timer-box").text(timeNumber + " Seconds");
 
@@ -189,12 +189,10 @@ $(document).ready(function() {
         console.log(count);
         console.log ("Right: " + rightAns+ " Wrong: " + wrongAns + " Unanswered: " + unAns);
 
-        setTimeout(displayQuestion, 2000);
-
         if (count === triviaArr.length) {
-            setTimeout(gameSummary, 2000);
+            setTimeout(gameSummary, 3000);
         } else {
-            setTimeout(displayQuestion, 2000);
+            setTimeout(displayQuestion, 3000);
         }
     }
     //gameSummary reports the total number of correct, incorrect, and unanswered questions.
